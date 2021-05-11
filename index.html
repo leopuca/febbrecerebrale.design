@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> febbre.cerebrale </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script type='text/javascript' src='script.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<script type='text/javascript' src='tween.js'></script>
+	<script type="module" src="scriptThree.js"></script>
+
+	<!-- <div id="loadingPage"></div> -->
+
+	<header>
+		<h1 id="logo"> febbre.cerebrale </h1>
+		<div id="svgContainer">
+			<svg id="starMenu" onclick="explore();" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path id="cross" d="M14.33,12l8.86,4.62-1.5,2.56-8.5-5.09L13.52,24h-3l.29-10L2.31,19.2.81,16.64,9.6,12,.81,7.36,2.31,4.8,10.81,10,10.52,0h3l-.33,10,8.5-5.17,1.5,2.56Z"/>
+			</svg>
+		</div>
+	</header>
+
+	<div id="menu">
+		<div id="sx">
+			<h1 id="prj"> -projects- </h1>
+			<h1 class="txtSx" id="an" onclick="content(this.id);"> Sp </h1>
+			<h1 class="txtSx" id="ju" onclick="content(this.id);"> Ju </h1>
+			<h1 class="txtSx" id="se" onclick="content(this.id);"> Gi </h1>
+			<h1 class="txtSx" id="lu" onclick="content(this.id);"> Lu </h1>
+			<h1 class="txtSx" id="pe" onclick="content(this.id);"> Pe </h1>
+			<img class="brainEcho1" src="brain.png" />
+		</div>
+
+		<div id="dx">
+			<h1 id="exp"> -experiments- </h1>
+			<h1 class="txtDx" id="ke" onclick="content(this.id);"> Ke </h1>
+			<h1 class="txtDx" id="sk" onclick="content(this.id);"> Sk </h1>
+			<h1 class="txtDx" id="sn" onclick="content(this.id);"> Sn </h1>
+			<h1 class="txtDx" id="fr" onclick="content(this.id);"> Fr </h1>
+			<h1 class="txtDx" id="tor" onclick="content(this.id);"> Tw </h1>
+			<img class="brainEcho2" src="brain.png" />
+		</div>
+	</div>
+
+	<div class="content" id="content">
+		<div id="inContent">
+			<img id="imgContent" class="imgContent">
+		</div>
+		<div id="empty">
+			<div class="infos" id="infos">
+
+
+				<h1 class="infoprj" id="titoloprj"> Titolo del progetto </h1>
+				<h1 class="infoprj" id="sottotitoloprj"> Ambito del progetto </h1>
+
+				<p class="captionContent" id="captionContent"> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+					nisi ut aliquip ex ea commodo consequat. </p>
+
+					<a id="contentLink" href="#" target="_blank">
+						<svg id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.97 374.97"><defs>
+							<style>.cls-1{fill:#fff;}</style></defs>
+							<path class="cls-1" d="M436.92,385.4,437,75,126.65,75l-.05,36.52h248L62.05,424.09,87.91,450,400.45,137.41v248.1Z" transform="translate(-62.05 -74.98)"/>
+						</svg>
+					</a>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div id="about">
+
+			<div class="sxAbout">
+				<img id="imgBio" src="imgs/bio.png">
+			</div>
+
+			<div class="dxAbout">
+				<p class="bio">	Sono Leonardo, nato a L'Aquila nell'anno 2000 e cresciuto in un piccolo paese di provincia. Un paese tanto piccolo che quasi mi stava stretto,
+					              così a 18 anni, dopo essermi diplomato al Liceo Scientifico delle Scienze Applicate, ho deciso di trasferirmi a Milano per studiare Design della Comunicazione.
+												La mia passione per il disegno ed attitudine creativa, che all'inizio era solamente un'espressione personale spontanea, si è evoluta durante la formazione universitaria
+												nella figura professionale e complessa del designer. Così nel 2021 ho conseguito la laurea triennale in Design della Comunicazione presso il Politecnico di Milano.
+                        Per riassumere la mia vita in breve: quando non disegno renderizzo, quando non renderizzo penso, quando non penso corro. La mia specialità è superare ostacoli, letteralmente.
+												Sui social mi firmo come febbre cerebrale in riferimento alla novella Il Treno ha Fischiato di Pirandello: a volte mi sento un po' Belluca. </p>
+				</div>
+
+			</div>
+
+
+
+			<canvas id="c"></canvas>
+
+			<footer id="footer">
+				<h1 id="btnAbout" onclick="about();"> about </h1>
+				<div class="social">
+					<a href="https://www.instagram.com/febbre.cerebrale/" target="_blank"> instagram </a>
+					<a href="https://twitter.com/FCerebrale" target="_blank"> twitter </a>
+					<a href="https://www.linkedin.com/in/leonardo-puca/" target="_blank"> linkedin </a>
+				</div>
+
+				<div class="socialicons">
+
+					<a href="https://www.instagram.com/febbre.cerebrale/" target="_blank">
+						<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263.02 263.02"><defs>
+							<style>.cls-1{fill:#fff;}</style></defs>
+							<g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+								<path class="cls-1" d="M201.14,47a15.42,15.42,0,1,0,15.42,15.42A15.42,15.42,0,0,0,201.14,47Z"/>
+								<path class="cls-1" d="M132.59,66.74a64.77,64.77,0,1,0,64.77,64.77A64.84,64.84,0,0,0,132.59,66.74Zm0,106.26a41.49,41.49,0,1,1,41.49-41.49A41.53,41.53,0,0,1,132.59,173Z"/>
+								<path class="cls-1" d="M184,263H79A79.09,79.09,0,0,1,0,184V79A79.09,79.09,0,0,1,79,0H184a79.1,79.1,0,0,1,79,79V184A79.1,79.1,0,0,1,184,263ZM79,24.74A54.32,54.32,0,0,0,24.74,79V184A54.32,54.32,0,0,0,79,238.27H184A54.32,54.32,0,0,0,238.27,184V79A54.32,54.32,0,0,0,184,24.74Z"/>
+							</g></g>
+						</svg>
+					</a>
+
+					<a href="https://twitter.com/FCerebrale" target="_blank">
+						<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244.66 201.37"><defs>
+							<style>.cls-1{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+								<path class="cls-1" d="M243.65,24.14a101.28,101.28,0,0,1-24.74,7.05c4-.67,9.82-7.87,12.16-10.78a45.54,45.54,0,0,0,8.22-15c.21-.43.37-1-.06-1.29a1.42,1.42,0,0,0-1.31.11,126.31,126.31,0,0,1-29.34,11.23,2,2,0,0,1-2-.54A23.6,23.6,0,0,0,204,12.32a52.11,52.11,0,0,0-14.21-8.71A49.54,49.54,0,0,0,168,.1a52.22,52.22,0,0,0-20.68,5.84,53.33,53.33,0,0,0-16.67,13.63,51.26,51.26,0,0,0-10,20,54.14,54.14,0,0,0-.52,21.07c.15,1.17,0,1.33-1,1.17-40.29-6-73.68-20.41-100.8-51.3-1.17-1.35-1.81-1.35-2.78.1C3.69,28.34,9.45,56.91,24.27,71c2,1.87,4,3.75,6.19,5.45-.8.17-10.66-.9-19.45-5.45-1.18-.74-1.77-.32-1.87,1a30.09,30.09,0,0,0,.32,5.77c2.27,18,14.76,34.7,31.85,41.21a30.41,30.41,0,0,0,6.47,2c-3.9.86-7.91,1.47-19.08.59-1.39-.26-1.92.43-1.39,1.77C35.7,146.16,53.82,153,67.39,156.84c1.82.32,3.64.32,5.46.75-.11.16-.22.16-.32.32-4.51,6.86-20.11,12-27.38,14.51a98.09,98.09,0,0,1-41.57,5.32c-2.24-.33-2.71-.31-3.31,0s-.08.91.64,1.49c2.83,1.87,5.72,3.53,8.66,5.13a136.7,136.7,0,0,0,27.79,11.12c49.94,13.79,106.2,3.66,143.7-33.6,29.45-29.26,39.77-69.61,39.77-110,0-1.58,1.86-2.45,3-3.29,7.67-5.75,13.85-12.64,19.56-20.33a6.23,6.23,0,0,0,1.3-3.9v-.21C244.66,23.49,244.64,23.68,243.65,24.14Z"/>
+							</g></g></svg>
+						</a>
+
+						<a href="https://www.linkedin.com/in/leonardo-puca/" target="_blank">
+							<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 209.4 208.92"><defs>
+								<style>.cls-1{fill:#fff;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+									<path class="cls-1" d="M3.45,69.35H46.9V208.92H3.45ZM25.19,0A25.16,25.16,0,1,1,0,25.13,25.15,25.15,0,0,1,25.19,0"/>
+									<path class="cls-1" d="M74.12,69.35h41.61V88.44h.57c5.81-11,20-22.54,41.08-22.54,43.92,0,52,28.88,52,66.47v76.55H166.05V141.06c0-16.19-.31-37-22.54-37-22.59,0-26,17.63-26,35.83v69H74.12Z"/>
+								</g></g></svg>
+							</a>
+						</div>
+					</footer>
+
+
+
+				</body>
+
+				</html>
